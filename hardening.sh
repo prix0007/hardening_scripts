@@ -13,7 +13,10 @@ echo "blacklist usb-storage" >> /etc/modprobe.d/blacklist.conf
 
 # TODO : Better to make a sshd_config file and replace files
 
-echo " ChallengeResponseAuthentication no \n PasswordAuthentication no \n PermitRootLogin no \n PermitEmptyPasswords no \n Port 534 \n MaxAuthTries 5 \n Protocol 2" >> /etc/ssh/sshd_config
+# echo " ChallengeResponseAuthentication no \n PasswordAuthentication no \n PermitRootLogin no \n PermitEmptyPasswords no \n Port 534 \n MaxAuthTries 5 \n Protocol 2" >> /etc/ssh/sshd_config
+
+sudo rm /etc/ssh/sshd_config
+sudo cp ./sshd_config /etc/ssh/
 
 systemctl restart ssh
 
