@@ -30,8 +30,8 @@ sudo apt upgrade -y
 sudo ufw default allow outgoing 
 sudo ufw default deny incoming
 
-# Allow application and ports which are needed on firewall
-sudo ufw allow ssh
+# Allow application and ports which are needed on firewall here
+
 sudo ufw allow 534
 
 sudo ufw enable
